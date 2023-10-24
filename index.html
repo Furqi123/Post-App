@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post App</title>
+    <link rel="stylesheet" href="./bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1">Post App</span>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-5 col-lg-4">
+                <div class="main p-4">
+                    <div class="card p-2">
+
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Title</label>
+                            <input type="text" id="title" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+                            <textarea id="Description" class="form-control" id="exampleFormControlTextarea1"
+                                rows="3"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <div class="images-list d-flex">
+                                <img class="bg-image" onclick="selectImage('./img/img1.jpeg')" src="./img/img1.jpeg" alt="">
+                                <img class="bg-image" onclick="selectImage('./img/img2.jpg' )" src="./img/img2.jpg" alt="">
+                                <img class="bg-image" onclick="selectImage('./img/img3.jpeg')" src="./img/img3.jpeg" alt="">
+                                <img class="bg-image" onclick="selectImage('./img/img4.webp')" src="./img/img4.webp" alt="">
+                                <img class="bg-image" onclick="selectImage('./img/img5.webp')" src="./img/img5.webp" alt="">
+                            </div>
+                        </div>
+
+                        <button onclick="post()" type="submit" class="btn btn-primary">Post</button>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-12 col-sm-12 col-md-7 col-lg-8">
+                <div id="posts" class="main p-4">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="./bootstrap.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
